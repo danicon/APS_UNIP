@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>Enchentes na região de São Paulo</title>
+        <link rel="stylesheet" type="text/css" href="../_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="../_css/form.css"> 
+    </head>
+    <body>
+        <div id="interface">
+
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>SÃO PAULO</h1>
+                    <h2>História de São Paulo explica crises com chuvas e enchentes na cidade</h2>
+                </hgroup>
+      
+                <img id="icone" src="../_imagens/unnamed.png"><br>
+    
+                <nav id="menu">
+                    <h1>MENU PRINCIPAL</h1>
+                    <ul type="disc">   
+                        <li onmouseover="mudaFoto('../_imagens/casinha_colorida.png')" onmouseout="mudaFoto('../_imagens/unnamed.png')"><a href="../index.html">HOME</a></li>
+                        <li onmouseover="mudaFoto('../_imagens/Especificações.png')" onmouseout="mudaFoto('../_imagens/unnamed.png')"><a href="espific.html">ESPECIFICAÇÕES</a></li>
+                        <li onmouseover="mudaFoto('../_imagens/fotos.png')" onmouseout="mudaFoto('../_imagens/unnamed.png')"><a href="fotoos.html">FOTOS</a></li>
+                        <li onmouseover="mudaFoto('../_imagens/toma4025-rumax-folder-multimedia.png')" onmouseout="mudaFoto('../_imagens/unnamed.png')"><a href="multimedia.html">MULTIMÍDIA</a></li>
+                        <li onmouseover="mudaFoto('../_imagens/unnamed.png')" onmouseout="mudaFoto('../_imagens/unnamed.png')"><a href="fale-conosco.html">FALE CONOSCO</a></li>
+                    </ul> 
+                </nav> 
+    
+            </header>
+
+            <section id="corpo-full"></section>
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contatos</h1> 
+                            <h2>por Andre, Daniel, Leonardo e Richard</h2> 
+                            <h3 class="direita">Atualizado no ano de 2020</h4><br><br>
+                        </hgroup>
+                    </header>
+
+                    <!-- O formulário não está funcionado, pois não esá salvo em um banco de Dados e também não ultilizanos a linguagem PHP -->
+                    <form method="POST" id="fContato" action="mailto:dancon.alferes@gmail.com">
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                                <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                                <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+                                <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40"></p>
+                                <fieldset id="sexo">
+                                    <legend>Sexo</legend>
+                                    <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label><br>
+                                    <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
+                                </fieldset>
+                                <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"></p>
+                        </fieldset>
+
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."></p>
+                                <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                                <p><label for="cEst">Estado:</label> 
+                                <select name="tEst" id="cEst">
+                                    <optgroup label="Região Sudeste">
+                                        <option value="SP" selected>São Paulo</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="ES">Espírito Santo</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                                <datalist id="cidades">
+                                    <option value="São Paulo"></option>
+                                    <option value="Guarulhos"></option>
+                                    <option value="Campinas"></option>
+                                    <option value="Osasco"></option>
+                                    <option value="Diadema"></option>
+                                </datalist>
+                        </fieldset>
+
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                                <p><label for="cUrg">Grau de Urgência:</label> Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                                <p><label for="cMsg">Mensagem:</label> <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                        </fieldset>
+
+                        <input type="submit" name="tEnviar" id="cEnviar" value="Enviar"> <input name="tLimpar" id="cLimpar" type="reset" value="Limpar"><br><br>
+
+                    </form>
+
+                </article>
+            </section>
+      
+            <script src="../_JS/script.js"></script>
+            
+             <footer id="rodape">
+
+                    <p>Copyright &copy; UNIP 2020 - by Grupo Enchentes/Alagamentos em SP <br>
+                    <div id="rodape">
+                        <a class="rodape" href="https://www.linkedin.com/in/daniel-alferes-369b831a5?trk=people-guest_people_search-card" target="_blank"><i class="fab fa-linkedin" ></i></a> | 
+                        <a class="rodape" href="https://github.com/andremartins746" target="_blank"><i class="fab fa-github"></i></a></p>
+                    </div>
+            
+            </footer>
+        
+        </div> 
+    </body>
+</html>
