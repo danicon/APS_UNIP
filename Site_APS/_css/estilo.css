@@ -9,7 +9,7 @@ body {
 }
 
 div#interface {
-    width: 950px;
+    width: 960px;
     background-color: #ffffff;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,.5);
@@ -252,13 +252,24 @@ body figure#slider {
      margin-top: 10px;
  }
 
+ div#lateral {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     clear: top;
+     border-width: 80px solid #606060;
+     width: 290px;
+     float: right;
+     background-color: #2734431c;
+ }
+
  aside#lateral {
      display: block;
      width: 260px;
-     float: right;
+     float: center;
      background-color: #dddddd;
      padding: 10px;
-     margin-top: 10px;
+     margin: 10px 5px auto 5px;
      box-shadow: 3px 3px 3px rgba(0,0,0,.5);
  }
 
@@ -277,12 +288,10 @@ body figure#slider {
  }
 
  aside#atencao {
-    display: block;
-    float: right;
+    display: flex;
+    flex-direction: column;
     width: 200px;
-    margin-left: 5px;
-    margin-top: 140px;
-    margin-right: 27px;
+    margin: 140px auto auto auto;
     box-shadow: 3px 3px 3px 3px rgba(24, 23, 23, 1);
     padding: 7px;
  }
