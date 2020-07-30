@@ -255,9 +255,6 @@ body figure#slider {
  div#lateral {
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
-     clear: top;
-     border-width: 80px solid #606060;
      width: 290px;
      float: right;
      background-color: #2734431c;
@@ -291,7 +288,7 @@ body figure#slider {
     display: flex;
     flex-direction: column;
     width: 200px;
-    margin: 140px auto auto auto;
+    margin: 140px auto 30px auto;
     box-shadow: 3px 3px 3px 3px rgba(24, 23, 23, 1);
     padding: 7px;
  }
